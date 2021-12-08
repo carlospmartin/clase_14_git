@@ -1,5 +1,98 @@
-/* Principal */
-
-main {
-    color: rebeccapurple;
+/* estilos generales */
+* {
+    margin: 0;
+    padding: 10;
+    box-sizing: border-box;
+    font-family: 'Late';
 }
+
+header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.8071603641456583) 57%, rgba(0,212,255,1) 100%);
+    height: 15vh;
+    color: aliceblue;
+}
+main{
+    margin: 50px;
+}
+div{
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+}
+h2, h3, h4 {
+    padding: 50px;
+}
+
+/* DEGRADADOS */
+.gradiente-lineal {
+    background-image: linear-gradient(230Deg, orange 15%, red 10%, rgb(75, 18, 75), pink);
+}
+.gradiente-radial{
+    background-image: radial-gradient(rgb(131, 126, 126), black 30%);
+}
+
+/*TRANSICION */
+.transicion{
+    transition: all 2s;
+}
+.transicion:hover {
+    width: 600px;
+    height: 400px;
+    background-image: url("https:/placekitten.com/600");
+}
+
+/* TRANSFORMACIONES */
+.translate {
+    transform: translate(300px); /*Eje X, Eje Y */
+}
+.rotate {
+    transform: rotate(50deg);
+}
+.scale {
+    transform: scale(0.5, 1.5);
+    margin-left: 70px;
+}
+.skew {
+    transform: skew(20deg, 10deg);
+}
+/* ANIMACION */
+.animacion {
+    animation-name: anima;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+
+}
+
+
+/*linea de tiempo*/
+@keyframes anima {
+    /*estructura */
+   /*from /*inicio {
+        /*estilos*/
+        /*border-radius: 50%
+    }
+    to /*final {
+        /*estilos*/
+        /*border-radius: 50%;
+        transform: translate(700px);
+    }
+*/
+    0% {
+        border-radius: 50%;
+    }
+    30% {
+        background-image: cubic-bezier(.33,.2,.25,.85);
+    }
+    50% {
+        transform: translate(700px);
+    }
+    70% {
+
+    }
+    100%{
+        border-radius: 50%;
+        transform: translate(0);
+    }
+}
+/* ANIMAR TEXTO*/
